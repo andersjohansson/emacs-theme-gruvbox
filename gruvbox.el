@@ -541,6 +541,7 @@ Should contain 2 %s constructs to allow for theme name and directory/prefix")
      (mu4e-header-key-face                      (:foreground gruvbox-bright_green :weight 'bold ))
      (mu4e-unread-face                          (:foreground gruvbox-bright_blue :weight 'bold ))
      (mu4e-highlight-face                       (:foreground gruvbox-bright_green))
+     (mu4e-header-highlight-face                (:inherit 'secondary-selection))
 
      ;; shell script
      (sh-quoted-exec                            (:foreground gruvbox-bright_purple))
