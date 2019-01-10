@@ -261,7 +261,7 @@ Should contain 2 %s constructs to allow for theme name and directory/prefix")
      (helm-selection-line                       (:background gruvbox-dark1))
      (helm-separator                            (:foreground gruvbox-faded_red))
      (helm-source-header                        (:foreground gruvbox-light2))
-     (helm-visible-mark                         (:foreground gruvbox-black :background gruvbox-light3))
+     (helm-visible-mark                         (:foreground gruvbox-black :background gruvbox-dark4))
 
      ;;hi-lock-mode
      (hi-black-b                                (:foreground gruvbox-black :weight 'bold))
