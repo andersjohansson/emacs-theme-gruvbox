@@ -641,7 +641,24 @@ Should contain 2 %s constructs to allow for theme name and directory/prefix")
      (flycheck-error-list-info                  (:foreground gruvbox-bright_blue :bold t))
 
      )
+
+    (gruvbox--define-with-color-vars-macro ,name ,palette)
+
     ,@body))
+
+(defmacro gruvbox--define-with-color-vars-macro (name palette)
+  (let* ((palette-full (autothemer--fill-empty-palette-slots palette))
+         (spec-choice (face-spec-choose
+                       (cl-loop with i = 0
+                                for s in (car palette-full)
+                                collect (append (list s) (list i))
+                                do (cl-incf i))))
+         (let-block (autothemer--extract-let-block palette-full spec-choice)))
+    `(defmacro ,(intern (concat (symbol-name name) "-with-palette")) (&rest body)
+       "Evaluate BODY with gruvbox color variables bound"
+       (declare (indent 0))
+       `(let* ,',let-block
+          ,@body))))
 
 (provide 'gruvbox)
 
