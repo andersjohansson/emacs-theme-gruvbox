@@ -314,6 +314,10 @@ Should contain 2 %s constructs to allow for theme name and directory/prefix")
      (message-header-xheader                    (:foreground gruvbox-faded_blue))
      (message-separator                         (:inherit 'font-lock-comment-face))
      (message-cited-text                        (:inherit 'font-lock-comment-face))
+     (message-cited-text-1                      (:foreground gruvbox-bright_blue))
+     (message-cited-text-2                      (:foreground gruvbox-bright_purple))
+     (message-cited-text-3                      (:foreground gruvbox-bright_aqua))
+     (message-cited-text-4                      (:foreground gruvbox-bright_green))
      (message-mml                               (:foreground gruvbox-faded_green :weight 'bold))
 
      ;; org-mode
